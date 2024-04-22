@@ -7,7 +7,7 @@ export default {
 </script>
 
 <template>
-    FOOTER
+
 </template>
 
 <style scoped lang="scss">

@@ -7,7 +7,7 @@ export default {
 </script>
 
 <template>
-    MAIN
+   
 </template>
 
 <style scoped lang="scss">
