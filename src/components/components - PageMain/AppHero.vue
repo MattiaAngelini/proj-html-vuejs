@@ -77,16 +77,14 @@ export default {
 @use '../src/assets/style/generic' as *;
 
    .ms-carousel {
-    height: 700px;
-    background-color: red;
-        
+   
         .ms-container {
             top: 50%;
             left: 20%;
         }
 
         img {
-            max-height: 100%;
+            
             width: 100%;
             object-fit: cover;
             border-bottom: 10px solid black;
