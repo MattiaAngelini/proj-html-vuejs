@@ -50,7 +50,7 @@ export default {
 
     <div class="text-center">
       <img src="" alt="">
-      <h3 class="p-3">Resent Articles</h3>
+      <h3 class="p-3">Recent Articles</h3>
       <p class="mb-3">Useful information about car.</p>
     </div>
 
