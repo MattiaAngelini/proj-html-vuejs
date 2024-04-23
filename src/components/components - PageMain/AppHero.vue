@@ -83,12 +83,9 @@ export default {
             left: 20%;
         }
 
-        img {
-            
+        img {        
             width: 100%;
-            object-fit: cover;
-            border-bottom: 10px solid black;
-            border-top: 10px solid black;
+            object-fit: cover;          
         }
 
         .fa-chevron-left {
