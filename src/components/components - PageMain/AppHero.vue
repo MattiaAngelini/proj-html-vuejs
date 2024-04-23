@@ -60,9 +60,9 @@ export default {
             <img class="position-relative" :src="carousel[activeImage].image" alt="">  
             
             <div class="ms-container position-absolute text-white">
-                <h3> {{carousel[activeImage].title }}</h3>
+                <h1> {{carousel[activeImage].title }}</h1>
                 <p>  {{carousel[activeImage].text}} </p>
-                <a href="http://" target="_blank" >Learn more</a>
+                <a href="http://" target="_blank" >Learn more <i class="fas fa-arrow-right p-2"></i></a>
             </div>
         </div> 
 
@@ -81,6 +81,12 @@ export default {
         .ms-container {
             top: 50%;
             left: 20%;
+            line-height: 40px;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                }
         }
 
         img {        

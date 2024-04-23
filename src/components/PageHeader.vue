@@ -43,7 +43,7 @@ export default {
 
                 },
                 {title: null,
-                 image: '../src/assets/img/bars-solid.png'
+                 image: '../src/assets/img/bars-solid.svg'
 
                 },
                 {title: '+1(234) 567 89 10',
@@ -74,9 +74,9 @@ export default {
         <section class="d-flex justify-content-center gap-3">
 
             <!--LOGO-->
-            <div>
+            <div class="d-flex align-items-center">
                 <img src="../assets/img/loader-autocar.png" alt="">
-                <span>Autocar</span>
+                <span class="title-logo">Autocar</span>
             </div>
             
             <!--NAV-->
@@ -85,7 +85,7 @@ export default {
             </ul>
             
             <!--ACCOUNT-->
-            <ul class="d-flex align-items-center gap-3">
+            <ul class="container-icons d-flex align-items-center gap-3">
                 <li v-for="link in navIcons">   
                     <img :src="link.image" alt="">   
                     {{ link.title }} 
@@ -102,10 +102,33 @@ export default {
 
 <style scoped lang="scss">
 @use '../src/assets/style/generic' as *;
-
-img {
-    width: 50px;
-}
+@use '../src/assets/style/partials/variables' as *;
 
 
+    .title-logo {
+        font-weight: 900;
+        margin-left: 6px;
+    }
+
+    
+
+    img {
+        width: 80px;
+    }
+
+    .container-icons{
+
+        li {
+            border: 2px solid black;
+            border-radius: 6px;
+            padding: 6px;
+
+            img {
+                 height: 40px;
+                 width: 40px;
+            }
+        }
+       
+    }
+    
 </style>
