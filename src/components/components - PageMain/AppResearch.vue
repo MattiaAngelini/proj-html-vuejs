@@ -7,11 +7,33 @@ export default {
     data() {
 
       return {
-        categories: ['Cabrio','Suv','Hatchback','Sedan'],
+
+        categories: [
+          { type: 'Cabrio',
+            image: '../src/assets/img/images-AppResearch/type/cabrio.jpg'
+          },
+          { type: 'Suv',
+            image: '../src/assets/img/images-AppResearch/type/suv.jpg'
+          },
+          { type: 'Hatchback',
+            image: '../src/assets/img/images-AppResearch/type/hatchback.jpg'
+          },
+          { type: 'Sedan',
+            image: '../src/assets/img/images-AppResearch/type/sedan.jpg'
+          },
+          { type: 'Pick Up',
+            image: '../src/assets/img/images-AppResearch/type/pickup.jpg'
+          },
+          { type: 'Coupè',
+            image: '../src/assets/img/images-AppResearch/type/coupe.jpg'
+          },
+        ],
+
         brands:['Bmw','Seat','Volkswagen'],
         fueltype: ['Electric','Diesel','Gasoline'] ,
         transmission: ['Automatic','Manual'],
         status: ['New','Used']
+
 
       };
       },
@@ -30,78 +52,90 @@ export default {
 <template>
    
    <section class="container p-3">
-    <!--INPUT FILTERS & BUTTON-->
-    <div class="d-flex justify-content-center gap-3">
-      <input type="text"  placeholder="Keywords">    
-      <input type="text" placeholder="Location">
 
-     
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-        All Categories
-      </button>
+    <!----------------------------------FILTERS BAR----------------------------------------->
+    <div class="p-4">
+      <!--INPUT FILTERS & BUTTON-->
+      <div class="d-flex justify-content-center gap-3">
+        <input type="text"  placeholder="Keywords">    
+        <input type="text" placeholder="Location">
 
-      <ul class="dropdown-menu">
-        <li v-for="category in categories" class="dropdown-item" >{{ category }}</li>
-
-      </ul>
-    </div>
-
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-        Brand
-      </button>
       
-      <ul class="dropdown-menu">
-        <li v-for="brand in brands" class="dropdown-item" >{{ brand }}</li>
+      <!--CATEGORIES-->
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          All Categories
+        </button>
 
-      </ul>
-    </div>
+        <ul class="dropdown-menu">
+          <li v-for="category in categories" class="dropdown-item" >{{ category.type }}</li>
 
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-        Fuel Type
-      </button>
+        </ul>
+      </div>
       
-      <ul class="dropdown-menu">
-        <li v-for="type in fueltype" class="dropdown-item"> {{ type }} </li>
+      <!--BRAND-->
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Brand
+        </button>
+        
+        <ul class="dropdown-menu">
+          <li v-for="brand in brands" class="dropdown-item" >{{ brand }}</li>
 
-      </ul>
-    </div>
-
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-        Transmission
-      </button>
+        </ul>
+      </div>
       
-      <ul class="dropdown-menu">
-        <li v-for="shift in transmission" class="dropdown-item" >{{ shift }}</li>
+      <!--FUELTYPE-->
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Fuel Type
+        </button>
+        
+        <ul class="dropdown-menu">
+          <li v-for="type in fueltype" class="dropdown-item"> {{ type }} </li>
 
-      </ul>
-    </div>
-
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-        Status
-      </button>
+        </ul>
+      </div>
       
-      <ul class="dropdown-menu">
-        <li v-for="condition in status" class="dropdown-item" > {{ condition }}</li>
-      </ul>
-    </div>
+      <!--TRANSMISSION-->
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Transmission
+        </button>
+        
+        <ul class="dropdown-menu">
+          <li v-for="shift in transmission" class="dropdown-item" >{{ shift }}</li>
 
-      <button>Search</button>
+        </ul>
+      </div>
+      
+      <!--STATUS-->
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Status
+        </button>
+        
+        <ul class="dropdown-menu">
+          <li v-for="condition in status" class="dropdown-item" > {{ condition }}</li>
+        </ul>
+      </div>
+        
 
-    </div>
+        <!--BUTTON RESEARCH-->
+        <button>Search</button>
 
-    <!--TYPE CARS AVALAIBLE-->
+      </div>
+  </div>
+
+    <!-----------------TYPE CARS AVALAIBLE---------------------------->
     <div class="d-flex justify-content-between gap-2">
 
-      <div class="card text-bg-light mb-3" style="max-width: 18rem;">
-        <div class="card-body">
-          <img src="" alt="">
+      <div v-for="category in categories"  class="card text-bg-light mb-3" style="max-width: 18rem;">
+        <div  class="card-body">
+
           
-          <p class="card-text"> cabrio </p>
+          <img :src="category.image" alt="">
+          <p class="card-text"> {{ category.type }} </p>
           <p class="card-text"> 3 listings</p>
         </div>
       </div>
