@@ -5,7 +5,7 @@
   import AppResearch from './components - PageMain/AppResearch.vue';
   import SellVehicle from './components - PageMain/SellVehicle.vue';
   import Customers from './components - PageMain/Customers.vue';
-  import ResentArticles from './components - PageMain/ResentArticles.vue';
+  import RecentArticles from './components - PageMain/RecentArticles.vue';
 
   export default {
     name: 'PageMain',
@@ -14,7 +14,7 @@
       AppResearch,
       SellVehicle,
       Customers,
-      ResentArticles
+      RecentArticles
     }
   }
 </script>
@@ -26,7 +26,7 @@
         <AppResearch></AppResearch>
         <SellVehicle></SellVehicle>
         <Customers></Customers>
-        <ResentArticles></ResentArticles>
+        <RecentArticles></RecentArticles>
 
     </main>
 </template>
