@@ -359,12 +359,7 @@ export default {
           i {
             color: $black-primary;
             margin-right: 6px;
-          }
-
-          
-          
+          }       
       }
-
-
-   
+ 
 </style>

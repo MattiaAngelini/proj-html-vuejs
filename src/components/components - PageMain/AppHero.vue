@@ -83,6 +83,11 @@ export default {
             left: 20%;
             line-height: 40px;
 
+                h1{font-size: 60px;
+                    font-weight: 700;
+                    width: 500px;
+                    word-wrap: break-word;}
+
                 a {
                     text-decoration: none;
                     color: white;

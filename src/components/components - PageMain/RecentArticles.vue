@@ -49,7 +49,7 @@ export default {
   <section>
 
     <div class="text-center">
-      <img src="" alt="">
+      <img class="img-like" src="../../assets/img/like-black.png" alt="">
       <h3 class="p-3">Recent Articles</h3>
       <p class="mb-3">Useful information about car.</p>
     </div>
@@ -76,17 +76,24 @@ export default {
 @use '../src/assets/style/generic' as *;
 @use '../src/assets/style/partials/variables' as *;
 
+  .img-like {width: 50px;
+             margin-top: 30px;
+            }
 
-.card {
-  line-height: 26px;
+            h3{font-weight: 700;}
 
-    button {
-            color: white;
-            background-color: $black-primary;
-            border: none;
-            font-weight: 600;
-            padding: 16px 32px 16px 32px;         
+            p{color: grey;}
+
+  .card {
+    line-height: 26px;
+
+      button {
+              color: white;
+              background-color: $black-primary;
+              border: none;
+              font-weight: 600;
+              padding: 16px 32px 16px 32px;         
+      }
     }
-  }
-   
+    
 </style>

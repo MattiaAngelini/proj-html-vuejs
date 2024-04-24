@@ -37,14 +37,14 @@ export default {
             <div class="offset-1 col-5">
                 
                 <div class="mb-4">
-                    <h4 class="text-center p-2">Want to buy ore sell a vehicle?</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed eaque odit nostrum aliquid nulla, obcaecati quae inventore sit odio porro iure iste at dolores sunt minima ullam temporibus similique laborum!</p>
+                    <h3 class="text-center p-2">Want to buy ore sell a vehicle?</h3>
+                    <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed eaque odit nostrum aliquid nulla, obcaecati quae inventore sit odio porro iure iste at dolores sunt minima ullam temporibus similique laborum!</p>
                 </div>
                 
                 <div class="d-flex gap-4 mb-4">
                     
-                    <span>IMMAGINE</span>
-                    <div>
+                    <span><img class="img-fluid" src="../../assets/img/ferrari.png" alt=""></span>
+                    <div class="mt-4">
                         <h6>Model Vehicles</h6>
                         <p>We are sure that you will find vehicles of suitable models on our website</p>
 
@@ -53,8 +53,8 @@ export default {
 
                 <div class="d-flex gap-4 mb-4">
                     
-                    <span>IMMAGINE</span>
-                    <div>
+                    <span><img class="img-fluid" src="../../assets/img/ferrari.png" alt=""></span>
+                    <div class="mt-4">
                         <h6>2nd hand Vehicles</h6>
                         <p>We are sure that you will find vehicles of suitable models on our website</p>
 
@@ -96,7 +96,7 @@ export default {
 
     .circle-2 {
         position: absolute;
-        bottom: 0;
+        top: 60%;
         right: 0;
     }
 
@@ -106,7 +106,8 @@ export default {
     }
 
     .offset-1 {
-        line-height: 30px;
+        line-height: 26px;
+            
     }
 
     button {
@@ -117,5 +118,7 @@ export default {
         padding: 16px;
         width: 200px;
     }
+
+    p {color: grey;}
     
 </style>

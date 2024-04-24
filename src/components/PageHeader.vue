@@ -60,15 +60,12 @@ export default {
     },
     mounted() {
     //
-
 }
-
 }
 
 </script>
 
 <template>
-
     <header>
 
         <section class="d-flex justify-content-center gap-3">
@@ -80,7 +77,7 @@ export default {
             </div>
             
             <!--NAV-->
-            <ul class="d-flex align-items-center gap-3" v-for="link in nav">
+            <ul class="nav-link d-flex align-items-center gap-3" v-for="link in nav">
                 <li>{{ link.title }}</li>
             </ul>
             
@@ -94,7 +91,6 @@ export default {
             </ul>
             
         </section>
-
 
     </header>
 
@@ -110,25 +106,27 @@ export default {
         margin-left: 6px;
     }
 
-    
-
     img {
         width: 80px;
     }
 
-    .container-icons{
+    .nav-link {font-weight: 700;}
 
+    .container-icons {
         li {
             border: 2px solid black;
             border-radius: 6px;
             padding: 6px;
 
             img {
-                 height: 40px;
-                 width: 40px;
+            height: 40px;
+            width: 40px;
+            }
+
+            &:nth-child(3) { 
+            border: none; 
             }
         }
-       
     }
     
 </style>

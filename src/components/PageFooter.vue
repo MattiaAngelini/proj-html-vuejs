@@ -154,7 +154,7 @@ export default {
             width: 100%;
             color: $grey-primary;
             border: none;
-            border-radius: 6px;
+            border-radius: 10px;
             
           }
       }
