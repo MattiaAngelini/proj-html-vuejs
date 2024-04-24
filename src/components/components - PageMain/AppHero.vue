@@ -76,42 +76,67 @@ export default {
 <style scoped lang="scss">
 @use '../src/assets/style/generic' as *;
 
-   .ms-carousel {
-   
-        .ms-container {
-            top: 50%;
-            left: 20%;
-            line-height: 40px;
+.ms-carousel {
+    .ms-container {
+        position: absolute;
+        top: 60%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
 
-                h1{font-size: 60px;
-                    font-weight: 700;
-                    width: 500px;
-                    word-wrap: break-word;}
+    h1 {
+        font-size: 5vw; 
+        font-weight: 700;
+        max-width: 80%; 
+        margin: 0 auto; 
+    }
 
-                a {
-                    text-decoration: none;
-                    color: white;
-                }
-        }
+    p {
+        font-size: 3vw;
+        max-width: 80%; 
+        margin: 0 auto 20px; 
+    }
 
-        img {        
-            width: 100%;
-            object-fit: cover;          
-        }
+    .fa-chevron-left {
+        left: 0;
+        top: 50%;
+        padding: 2vw; 
+        cursor: pointer;
+    }
 
-        .fa-chevron-left {
-            left: 0;
-            top: 50%;
-            padding: 40px;
-            cursor: pointer;
-        }
+    .fa-chevron-right {
+        right: 0;
+        top: 50%;
+        padding: 2vw; 
+        cursor: pointer;
+    }
 
-        .fa-chevron-right{
-            right: 0;
-            top: 50%;
-            padding: 40px;
-            cursor: pointer;
-        }
-   }
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+//media queries
+
+@media only screen and (max-width: 576px) {
+    .ms-carousel .ms-container {
+        position: static; 
+        top: 50%;  
+        text-align: left;       
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .ms-carousel .ms-container h1 {
+        font-size: 3vw; 
+    }
+    
+    .ms-carousel .ms-container p {
+        font-size: 2vw; 
+    }
+}
+
 
 </style>
