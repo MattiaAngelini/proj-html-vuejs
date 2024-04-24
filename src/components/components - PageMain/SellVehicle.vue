@@ -14,19 +14,19 @@ export default {
 
 
             <!--LEFT COL-->
-            <div class="col-6 position-relative">
+            <div class="col-12 col-lg-6 position-relative">
                 
                 <div class="container-img">  
                     <img class="ms-img  position-absolute" src="../../assets/img/about-1.png" alt="">
                     <img class="ms-wrap" src="../../assets/img/circle-auto-car-1.png" alt="">
                 </div>
 
-                <div class="ms-circle circle-1 text-center p-4">
+                <div class="ms-circle circle-1 text-center p-4 d-none d-lg-block">
                    <div class="number">24</div>
                    <div>Years Of Experience</div>
                 </div>
 
-                <div class="ms-circle circle-2 text-center p-4">
+                <div class="ms-circle circle-2 text-center p-4 d-none d-lg-block">
                    <div class="number">240</div>
                    <div>Special Expert Team</div>
                 </div>
@@ -34,7 +34,7 @@ export default {
             </div>
 
             <!--RIGHT COL-->
-            <div class="offset-1 col-5">
+            <div class="col-12 col-lg-5 offset-lg-1">
                 
                 <div class="mb-4">
                     <h3 class="text-center p-2">Want to buy ore sell a vehicle?</h3>

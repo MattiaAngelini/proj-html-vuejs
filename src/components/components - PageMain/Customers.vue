@@ -56,7 +56,7 @@ mounted() {
       </div>
       
       <!--CARDS CUSTOMERS-->
-      <div class="d-flex justify-content-between container p-5">
+      <div class="d-flex flex-wrap justify-content-center container p-5 gap-2">
         <div v-for="card in customers" class="card text-bg-light d-flex mb-3 p-4" style="max-width: 18rem;">   
     
           <p class="card-text ">{{ card.description }}</p>
