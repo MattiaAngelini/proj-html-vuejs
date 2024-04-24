@@ -32,13 +32,154 @@ export default {
         brands:['Bmw','Seat','Volkswagen'],
         fueltype: ['Electric','Diesel','Gasoline'] ,
         transmission: ['Automatic','Manual'],
-        status: ['New','Used']
+        status: ['New','Used'],
 
 
+        carsAvalaibles:
+       [
+            {category: 'Cabrio',
+             brand: 'Bmw',
+             model: 'M-9',
+             fueltype: 'Electric',
+             transimission: 'Automatic',
+             status: 'Used',
+             location: 'Milano',
+             price: '34.000',
+             image: '../src/assets/img/images-AppResearch/carsAvalaible/bmw88-400x300.jpg'
+            },
+
+            {category: 'Cabrio',
+             brand: 'Bmw',
+             model: 'M-8',
+             fueltype: 'Diesel',
+             transimission: 'Automatic',
+             status: 'Used',
+             location: 'Torino',
+             price: '34.000',
+             image:'../src/assets/img/images-AppResearch/carsAvalaible/bmw-8-series-convertible-technical-data-sp-desktop-400x300.jpg'
+            },
+
+            {category: 'Cabrio',
+             brand: 'Bmw',
+             model: 'M-4',
+             fueltype: 'Gasoline',
+             transimission: 'Manual',
+             status: 'New',
+             location: 'Milano',
+             price: '36.000',
+             image:'../src/assets/img/images-AppResearch/carsAvalaible/bmw442-400x300.jpg'             
+            },
+
+            {category: 'Hatchback',
+             brand: 'Seat',
+             model: 'Ibiza',
+             fueltype: 'Electric',
+             transimission: 'Automatic',
+             status: 'Used',
+             location: 'Bari',
+             price: '27.000',
+             image: '../src/assets/img/images-AppResearch/carsAvalaible/yeni-ibiza-2-400x300.jpg'
+            },
+
+            {category: 'Suv',
+             brand: 'Seat',
+             model: 'Arona',
+             fueltype: 'Gasoline',
+             transimission: 'Automatic',
+             status: 'New',
+             location: 'Roma',
+             price: '68.000',
+             image:'../src/assets/img/images-AppResearch/carsAvalaible/makyajli-2022-seat-arona-1-400x300.jpg'
+             
+            },
+
+            {category: 'Suv',
+             brand: 'Volkswagen',
+             model: 'Taigo',
+             fueltype: 'Electric',
+             transimission: 'Automatic',
+             status: 'Used',
+             location: 'Milano',
+             price: '54.000',
+             image:'../src/assets/img/images-AppResearch/carsAvalaible/vw-taigo3832-400x300.jpg'           
+            },
+
+            {category: 'Suv',
+             brand: 'Volkswagen',
+             model: 'T-cross',
+             fueltype: 'Diesel',
+             transimission: 'Manual',
+             status: 'New',
+             location: 'Milano',
+             price: '47.000',
+             image:'../src/assets/img/images-AppResearch/carsAvalaible/2019-vw-t-cross-400x300.jpg'
+             
+            },
+
+            {category: 'Sedan',
+             brand: 'Volkswagen',
+             model: 'Passat',
+             fueltype: 'Diesel',
+             transimission: 'Automatic',
+             status: 'Used',
+             location: 'Milano',
+             price: '32.000',
+             image:'../src/assets/img/images-AppResearch/carsAvalaible/volkswagen-passat-1280x720-1-400x300.jpg'
+            },
+
+            {category: 'Cabrio',
+             brand: 'BMW',
+             model: 'M-9',
+             fueltype: 'Gasoline',
+             transimission: 'Manual',
+             status: 'Used',
+             location: 'Milano',
+             price: '30.000',
+             image: '../src/assets/img/images-AppResearch/carsAvalaible/bmw88-400x300.jpg'
+            },
+
+            {category: 'Cabrio',
+             brand: 'BMW',
+             model: 'M-4',
+             fueltype: 'Diesel',
+             transimission: 'Automatic',
+             status: 'New',
+             location: 'Milano',
+             price: '54.000',
+             image:'../src/assets/img/images-AppResearch/carsAvalaible/bmw442-400x300.jpg'  
+            },
+
+            {category: 'Sedan',
+             brand: 'Volskwagen',
+             model: 'Passat',
+             fueltype: 'Gasoline',
+             transimission: 'Automatic',
+             status: 'Used',
+             location: 'Bari',
+             price: '24.000',
+             image:'../src/assets/img/images-AppResearch/carsAvalaible/volkswagen-passat-1280x720-1-400x300.jpg'
+            },
+
+            {category: 'Suv',
+             brand: 'Volkswagen',
+             model: 'T-cross',
+             fueltype: 'Electric',
+             transimission: 'Automatic',
+             status: 'New',
+             location: 'Roma',
+             price: '64.000',
+             image:'../src/assets/img/images-AppResearch/carsAvalaible/2019-vw-t-cross-400x300.jpg'
+            },  
+        ],
+        showAllResults: false,
+   
       };
       },
-      methods: {
-      //
+      methods: {  
+       
+        toggleShowAll() {
+      this.showAllResults = !this.showAllResults;
+    },
       },
       mounted() {
       //
@@ -122,7 +263,7 @@ export default {
         
 
         <!--BUTTON RESEARCH-->
-        <button>Search</button>
+        <button @click="">Search</button>
 
       </div>
   </div>
@@ -143,29 +284,29 @@ export default {
     </div>
 
     <!--RESULTS CARDS CARS-->
-    <div class="d-flex justify-content-between gap-2">
-
-      <div class="card text-bg-light mb-3" style="max-width: 18rem;">
+    <div class="d-flex flex-wrap gap-2 justify-content-center">
+      <!-- CARDS -->
+      <div
+        v-for="(car, index) in (showAllResults ? carsAvalaibles : carsAvalaibles.slice(0, 8))"
+        :key="index"
+        class="card text-bg-light mb-3"
+        style="max-width: 18rem;"
+      >
         <div class="card-body">
-          <img src="" alt="">
-          
-          <p class="card-text"> BMW M9<i>X</i> </p>
-          <p class="card-text"> cabrio <i>X</i> </p>
-          
+          <img class="img-fluid" :src="car.image" alt="">
+          <p class="card-text">{{ car.brand}}<i>X</i> </p>
+          <p class="card-text"> {{ car.category }}<i>X</i> </p>
           <div class="d-flex gap-2">
-             <span><i>X</i>34.000</span>
-             <span><i>X</i>BMW</span>
-             <span><i>X</i>ELECTRIC</span>
+            <span><i>X</i>{{car.price}}</span>
+            <span><i>X</i>{{car.brand}}</span>
+            <span><i>X</i>{{car.fueltype}}</span>
           </div>
-          
-         
         </div>
       </div>
-
     </div>
 
-    <!-- BUTTON SHOW ALL
-    <div><button>Show All</button></div> -->
+    <!-- BUTTON SHOW ALL -->
+    <div class="d-flex justify-content-center"><button @click="toggleShowAll">Show All</button></div>
 
    </section>
 
@@ -174,5 +315,7 @@ export default {
 
 <style scoped lang="scss">
 @use '../src/assets/style/generic' as *;
+
+
    
 </style>
