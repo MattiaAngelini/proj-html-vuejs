@@ -194,8 +194,8 @@ export default {
    
    <section class="container p-3">
 
-    <!----------------------------------FILTERS BAR----------------------------------------->
-    <div class="p-4">
+    <!----------------------------------FILTERS INPUT----------------------------------------->
+    <div class="container-input p-4">
       <!--INPUT FILTERS & BUTTON-->
       <div class="d-flex justify-content-center gap-3">
         <input type="text"  placeholder="Keywords">    
@@ -263,7 +263,7 @@ export default {
         
 
         <!--BUTTON RESEARCH-->
-        <button @click="">Search</button>
+        <button class="ms-button" @click="">Search</button>
 
       </div>
   </div>
@@ -272,7 +272,7 @@ export default {
     <div class="d-flex justify-content-between gap-2">
 
       <div v-for="category in categories"  class="card text-bg-light mb-3" style="max-width: 18rem;">
-        <div  class="card-body">
+        <div  class="card-body text-center">
 
           
           <img :src="category.image" alt="">
@@ -294,19 +294,19 @@ export default {
       >
         <div class="card-body">
           <img class="img-fluid" :src="car.image" alt="">
-          <p class="card-text">{{ car.brand}}<i>X</i> </p>
-          <p class="card-text"> {{ car.category }}<i>X</i> </p>
+          <p class="card-text">{{ car.brand}} {{ car.model }}<i class="fa-solid fa-circle-check m-2"></i> </p>
+          <p class="card-text"> {{ car.category }}</p>
           <div class="d-flex gap-2">
-            <span><i>X</i>{{car.price}}</span>
-            <span><i>X</i>{{car.brand}}</span>
-            <span><i>X</i>{{car.fueltype}}</span>
+            <span><i class="fa-solid fa-dollar-sign"></i>{{car.price}}</span>
+            <span><i class="fa-solid fa-car"></i>{{car.brand}}</span>
+            <span><i class="fa-solid fa-gas-pump"></i>{{car.fueltype}}</span>
           </div>
         </div>
       </div>
     </div>
 
     <!-- BUTTON SHOW ALL -->
-    <div class="d-flex justify-content-center"><button @click="toggleShowAll">Show All</button></div>
+    <div class="d-flex justify-content-center"><button class="ms-button " @click="toggleShowAll">Show All Cars <i class="fas fa-arrow-right p-2"></i> </button></div>
 
    </section>
 
@@ -315,6 +315,55 @@ export default {
 
 <style scoped lang="scss">
 @use '../src/assets/style/generic' as *;
+@use '../src/assets/style/partials/variables' as *;
+
+
+
+  .container-input {
+
+      input{
+        border-radius: 6px;
+        border: 1px solid grey;
+        text-align: center;
+      }
+
+      button {
+        background-color: $white-primary;
+        color: grey;
+        height: 60px;
+      }
+      .ms-button {
+              color: white;
+              background-color: $black-primary;
+              border: none;
+              font-weight: 600;
+              padding: 16px 32px 16px 32px;         
+      }
+
+  }
+
+  .ms-button {
+              color: white;
+              background-color: $black-primary;
+              border: none;
+              font-weight: 600;
+              padding: 16px 32px 16px 32px;         
+      }
+
+
+      .card-body {
+        line-height: 30px;
+        font-size: 14px;
+        color: grey;
+
+          i {
+            color: $black-primary;
+            margin-right: 6px;
+          }
+
+          
+          
+      }
 
 
    
