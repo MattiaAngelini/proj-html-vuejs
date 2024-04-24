@@ -178,7 +178,7 @@ export default {
       methods: {  
         toggleShowAll() {
       this.showAllResults = !this.showAllResults;
-      
+
       //FUNZIONE PER FILTRARE LE AUTO:
       // Ho a disposizione un array di oggetti di auto disponibili.
       // Ho bisogno di salvare (v-model) le scelte dell'utente (input e select) in un array.
@@ -201,7 +201,43 @@ export default {
    <section class="container p-3">
 
     <!----------------------------------FILTERS INPUT----------------------------------------->
-    <div class="container-input p-4">
+    
+    <!--DROPDOWN MOBILE VERSION-->
+    <div class="dropdown d-block d-lg-none p-4">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Filters
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#"> 
+          <select name="" id="">
+            <option value="">used</option>
+            <option value="">new</option>
+          </select>  
+        </a>
+        </li>
+        <li><a class="dropdown-item" href="#"> 
+          <select name="" id="">
+            <option value="">gasoline</option>
+            <option value="">diesel</option>
+          </select>  
+        </a>
+        </li>
+        <li><a class="dropdown-item" href="#"> 
+          <select name="" id="">
+            <option value="">bmw</option>
+            <option value="">seat</option>
+          </select>  
+        </a>
+        </li>
+        
+      </ul>
+    </div>
+
+
+    <div class="container-input p-4 d-none d-lg-block ">
+      
+      
+      
       <!--INPUT FILTERS & BUTTON-->
       <div class="d-flex justify-content-center gap-3">
         <input type="text"  placeholder="Keywords">    
@@ -275,7 +311,7 @@ export default {
   </div>
 
     <!-----------------TYPE CARS AVALAIBLE---------------------------->
-    <div class="d-flex justify-content-between gap-2">
+    <div class="d-flex justify-content-between flex-wrap gap-2">
 
       <div v-for="category in categories"  class="card text-bg-light mb-3" style="max-width: 18rem;">
         <div  class="card-body text-center">
@@ -290,7 +326,7 @@ export default {
     </div>
 
     <!--RESULTS CARDS CARS-->
-    <div class="d-flex flex-wrap gap-2 justify-content-between">
+    <div class="d-flex flex-wrap gap-2 justify-content-center">
       <!-- CARDS -->
       <div
         v-for="(car, index) in (showAllResults ? carsAvalaibles : carsAvalaibles.slice(0, 8))"
@@ -326,6 +362,7 @@ export default {
 
 
   .container-input {
+    
 
       input{
         border-radius: 6px;
