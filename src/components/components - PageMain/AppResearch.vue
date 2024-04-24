@@ -176,9 +176,15 @@ export default {
       };
       },
       methods: {  
-       
         toggleShowAll() {
       this.showAllResults = !this.showAllResults;
+      
+      //FUNZIONE PER FILTRARE LE AUTO:
+      // Ho a disposizione un array di oggetti di auto disponibili.
+      // Ho bisogno di salvare (v-model) le scelte dell'utente (input e select) in un array.
+      // Se le selezioni dell'utente sono comprese tra le chiavi dell'oggetto , mostra solo gli oggetti con quelle chiavbi.
+
+
     },
       },
       mounted() {
@@ -284,7 +290,7 @@ export default {
     </div>
 
     <!--RESULTS CARDS CARS-->
-    <div class="d-flex flex-wrap gap-2 justify-content-center">
+    <div class="d-flex flex-wrap gap-2 justify-content-between">
       <!-- CARDS -->
       <div
         v-for="(car, index) in (showAllResults ? carsAvalaibles : carsAvalaibles.slice(0, 8))"
