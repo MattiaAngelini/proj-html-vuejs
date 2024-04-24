@@ -68,7 +68,7 @@ export default {
 <template>
     <header>
 
-        <section class="d-flex justify-content-between gap-3">
+        <section class="container d-flex justify-content-between gap-3">
 
             <!--LOGO-->
             <div class="d-flex align-items-center">

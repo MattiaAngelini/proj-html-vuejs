@@ -57,7 +57,7 @@ export default {
 <template>
   <footer>
 
-    <section class="container d-flex justify-content-evenly gap-4">
+    <section class="container d-flex flex-wrap justify-content-evenly gap-4">
 
       <!--CONTACTS-->
       <div class="">
@@ -115,7 +115,7 @@ export default {
       
       <!--QUICK LINKS-->
       <div>
-        <h5 class="mb-3">QuickLinks</h5>
+        <h5 class="mb-3 text-center">QuickLinks</h5>
         <ul>
           <li v-for="link in QuickLinks"><span class="p-1">-</span> {{ link.title }}</li>
         </ul>

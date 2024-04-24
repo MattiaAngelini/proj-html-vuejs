@@ -16,7 +16,7 @@ export default {
             <!--LEFT COL-->
             <div class="col-12 col-lg-6 position-relative">
                 
-                <div class="container-img">  
+                <div class="container-img position-relative">  
                     <img class="ms-img  position-absolute" src="../../assets/img/about-1.png" alt="">
                     <img class="ms-wrap" src="../../assets/img/circle-auto-car-1.png" alt="">
                 </div>
