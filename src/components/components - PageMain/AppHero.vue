@@ -20,6 +20,7 @@ export default {
                 },
             ],
             
+            // tiene traccia dell'indice dell'immagine attualmente visualizzata.
             activeImage: 0
         };
         },
@@ -27,7 +28,8 @@ export default {
         methods: {
         //SHOW NEXT IMAGE
         nextImage() {  
-
+            
+            //se activeimage inferiore lunghezza dell'array -1 incerementa activeimage di 1, altrimenti riporta a 0 per tornare prima immagin.
             if (this.activeImage < this.carousel.length - 1) {
                 this.activeImage++;
             } else {
@@ -35,6 +37,8 @@ export default {
             }
         },
         //SHOW PREV IMAGE
+
+        //se activImage maggiore di 0 riduci activeimage di 1, Altrimenti calcola lunghezza del carosello meno uno, per tornare all'ultima immagine.
         prevImage() {
             if (this.activeImage > 0) {
                 this.activeImage--;
@@ -121,10 +125,6 @@ export default {
 
 //media queries
 
-@media only screen and (max-width: 576px) {
-    
-}
-
 @media only screen and (max-width: 768px) {
     .ms-carousel 
         .ms-container h1 {
@@ -136,6 +136,5 @@ export default {
         font-size: 3vw; 
     }
 }
-
 
 </style>

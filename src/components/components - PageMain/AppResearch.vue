@@ -34,7 +34,6 @@ export default {
         transmission: ['Automatic','Manual'],
         status: ['New','Used'],
 
-
         carsAvalaibles:
        [
             {category: 'Cabrio',
@@ -171,10 +170,14 @@ export default {
              image:'../src/assets/img/images-AppResearch/carsAvalaible/2019-vw-t-cross-400x300.jpg'
             },  
         ],
+        //Quando la pagina viene caricata, showAllResults è impostato su false
+        //per mostrare solo un numero limitato di auto disponibili (i primi 8 elementi dell'array carsAvalaibles) (**vedi v-for con splice in template**).
         showAllResults: false,
    
       };
       },
+
+     //Quando l'utente clicca sul pulsante showAllResults diventa vera e mostra rimanenti oggetti.
       methods: {  
         toggleShowAll() {
       this.showAllResults = !this.showAllResults;
@@ -183,7 +186,6 @@ export default {
       // Ho a disposizione un array di oggetti di auto disponibili.
       // Ho bisogno di salvare (v-model) le scelte dell'utente (input e select) in un array.
       // Se le selezioni dell'utente sono comprese tra le chiavi dell'oggetto , mostra solo gli oggetti con quelle chiavbi.
-
 
     },
       },
@@ -199,9 +201,7 @@ export default {
 <template>
    
    <section class="container p-3">
-
-    <!----------------------------------FILTERS INPUT----------------------------------------->
-    
+    <!----------------------------------FILTERS INPUT-----------------------------------------> 
     <!--DROPDOWN MOBILE VERSION-->
     <div class="dropdown d-block d-lg-none p-4">
       <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -233,11 +233,8 @@ export default {
       </ul>
     </div>
 
-
     <div class="container-input p-4 d-none d-lg-block ">
-      
-      
-      
+       
       <!--INPUT FILTERS & BUTTON-->
       <div class="d-flex justify-content-center gap-3">
         <input type="text"  placeholder="Keywords">    
@@ -303,7 +300,6 @@ export default {
         </ul>
       </div>
         
-
         <!--BUTTON RESEARCH-->
         <button class="ms-button" @click="">Search</button>
 
@@ -312,7 +308,7 @@ export default {
 
     <!-----------------TYPE CARS AVALAIBLE---------------------------->
     <div class="d-flex justify-content-between flex-wrap gap-2">
-
+       
       <div v-for="category in categories"  class="card text-bg-light mb-3" style="max-width: 18rem;">
         <div  class="card-body text-center">
 
@@ -327,8 +323,14 @@ export default {
 
     <!--RESULTS CARDS CARS-->
     <div class="d-flex flex-wrap gap-2 justify-content-center">
+      
       <!-- CARDS -->
-      <div
+
+      <!--Se showAllResults è true, allora carsAvalaibles viene iterato tramite v-for per intero.
+        Se showAllResults è false, allora carsAvalaibles vengono iterati tramite v-for e con metodo slice(0, 8), solo i primi 8 elementi.-->
+
+        <!--V-FOR IN ( OPERATORE TERNIARIO: SE SHOWALLRESULTS TRUE OR FALSE = ITERA INTERO O SLICE 0,8)-->
+      <div    
         v-for="(car, index) in (showAllResults ? carsAvalaibles : carsAvalaibles.slice(0, 8))"
         :key="index"
         class="card text-bg-light mb-3"
@@ -352,14 +354,11 @@ export default {
 
    </section>
 
-
 </template>
 
 <style scoped lang="scss">
 @use '../src/assets/style/generic' as *;
 @use '../src/assets/style/partials/variables' as *;
-
-
 
   .container-input {
     
@@ -392,7 +391,6 @@ export default {
               font-weight: 600;
               padding: 16px 32px 16px 32px;         
       }
-
 
       .card-body {
         line-height: 30px;

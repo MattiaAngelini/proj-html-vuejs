@@ -100,62 +100,67 @@ export default {
 @use '../src/assets/style/generic' as *;
 @use '../src/assets/style/partials/variables' as *;
 
-header{
-    font-size: 10px;
+    header{
+        font-size: 10px;
+        position: fixed;
+        z-index: 999;
+        background-color: white;
+        width: 100%;
+        border-bottom: 2px solid $black-primary;
 
 
-            .title-logo {
-                font-weight: 900;
-                margin-left: 6px;
-            }
+                .title-logo {
+                    font-weight: 900;
+                    margin-left: 6px;
+                }
 
-            img {
-                width: 80px;
-            }
+                img {
+                    width: 80px;
+                }
 
-            .nav-link {font-weight: 700;}
+                .nav-link {font-weight: 700;}
 
-            .container-icons {
-               
+                .container-icons {
                 
-                li {
-                    border: 2px solid black;
-                    border-radius: 6px;
-                    padding: 6px;
                     
-                    img {
-                    height: 40px;
-                    width: 40px;
-                    }
+                    li {
+                        border: 2px solid black;
+                        border-radius: 6px;
+                        padding: 6px;
+                        
+                        img {
+                        height: 40px;
+                        width: 40px;
+                        }
 
-                    &:nth-child(3) { 
-                    border: none; 
-                    display: block;
+                        &:nth-child(3) { 
+                        border: none; 
+                        display: block;
+                        }
                     }
                 }
-            }
 
 
-}
-
-    /* Extra small devices (phones, 576px and down) */
-@media only screen and (max-width: 576px) {
-    .container-icons li {
-        display: none;
     }
-  
-}
 
-/* Large devices (desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    .container-icons li {
-        display: block;
+        /* Extra small devices (phones, 576px and down) */
+    @media only screen and (max-width: 576px) {
+        .container-icons li {
+            display: none;
+        }
+    
     }
-}
 
-/* Extra large devices (large desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    header {font-size: 16px;}
-}
+    /* Large devices (desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {
+        .container-icons li {
+            display: block;
+        }
+    }
+
+    /* Extra large devices (large desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) {
+        header {font-size: 16px;}
+    }
     
 </style>

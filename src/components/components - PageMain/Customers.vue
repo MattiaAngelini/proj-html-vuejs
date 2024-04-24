@@ -77,7 +77,6 @@ mounted() {
 @use '../src/assets/style/generic' as *;
 @use '../src/assets/style/partials/variables' as *;
 
-
     section{
       background-image: url('src/assets/img/comment-bg-autocar.jpg');
       background-size: cover;
@@ -89,7 +88,5 @@ mounted() {
   .img-rounded {
           width: 120px;
         }
-
         
-   
 </style>

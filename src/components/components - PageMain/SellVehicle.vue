@@ -12,7 +12,6 @@ export default {
     <section class="container d-flex p-5">
         <div class="row">
 
-
             <!--LEFT COL-->
             <div class="col-12 col-lg-6 position-relative">
                 

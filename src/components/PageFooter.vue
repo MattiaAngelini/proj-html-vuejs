@@ -58,7 +58,6 @@ export default {
   <footer>
 
     <section class="container d-flex flex-wrap justify-content-evenly gap-4">
-
       <!--CONTACTS-->
       <div class="">
 
@@ -99,9 +98,9 @@ export default {
           <input class="p-3 mb-1" placeholder="Your E-mail Address" type="text" name="" id="">
           <div>
             <button class="p-3"> Subscribe </button>
-          </div>
-          
+          </div>         
         </label>
+
       </div>
       
       <!--MY ACCOUNT-->
@@ -110,7 +109,6 @@ export default {
         <ul>
           <li v-for="link in MyAccountLinks"><span class="p-1">-</span>{{ link.title }}</li>
         </ul>
-
       </div>
       
       <!--QUICK LINKS-->
@@ -119,7 +117,6 @@ export default {
         <ul>
           <li v-for="link in QuickLinks"><span class="p-1">-</span> {{ link.title }}</li>
         </ul>
-
       </div>
 
     </section>
@@ -127,7 +124,6 @@ export default {
     <div class="text-center p-3">© 2022 Autocar - All Rights Reserved.</div>
 
   </footer>
-
 
 </template>
 
@@ -154,8 +150,7 @@ export default {
             width: 100%;
             color: $grey-primary;
             border: none;
-            border-radius: 10px;
-            
+            border-radius: 10px;            
           }
       }
 
@@ -165,11 +160,7 @@ export default {
           span {
             font-weight: 900;
           }
-      }
-
-     
+      } 
   }
 
-  
-   
 </style>
