@@ -146,13 +146,11 @@ header{
   
 }
 
-
 /* Large devices (desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     .container-icons li {
         display: block;
     }
-  
 }
 
 /* Extra large devices (large desktops, 1200px and up) */

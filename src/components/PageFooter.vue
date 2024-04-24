@@ -57,7 +57,7 @@ export default {
 <template>
   <footer>
 
-    <section class="container d-flex justify-content-between gap-3">
+    <section class="container d-flex justify-content-evenly gap-4">
 
       <!--CONTACTS-->
       <div class="">
@@ -90,7 +90,7 @@ export default {
       </div>
 
       <!--NEWSLETTER INPUT-->
-      <div class="">
+      <div class="d-none d-lg-block">
         <h5 class="mb-3">Join Our Newsletter</h5>
         <p class="mb-3">Subscribe to be informed about our services and products</p>
         

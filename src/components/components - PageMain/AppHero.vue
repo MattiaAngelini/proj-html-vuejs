@@ -77,6 +77,7 @@ export default {
 @use '../src/assets/style/generic' as *;
 
 .ms-carousel {
+    position: relative;
     .ms-container {
         position: absolute;
         top: 60%;
@@ -100,14 +101,14 @@ export default {
 
     .fa-chevron-left {
         left: 0;
-        top: 50%;
+        top: 40%;
         padding: 2vw; 
         cursor: pointer;
     }
 
     .fa-chevron-right {
         right: 0;
-        top: 50%;
+        top: 40%;
         padding: 2vw; 
         cursor: pointer;
     }
@@ -121,20 +122,18 @@ export default {
 //media queries
 
 @media only screen and (max-width: 576px) {
-    .ms-carousel .ms-container {
-        position: static; 
-        top: 50%;  
-        text-align: left;       
-    }
+    
 }
 
 @media only screen and (max-width: 768px) {
-    .ms-carousel .ms-container h1 {
-        font-size: 3vw; 
+    .ms-carousel 
+        .ms-container h1 {
+        font-size: 4vw; 
     }
     
-    .ms-carousel .ms-container p {
-        font-size: 2vw; 
+    .ms-carousel 
+        .ms-container p, a {
+        font-size: 3vw; 
     }
 }
 

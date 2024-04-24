@@ -54,7 +54,7 @@ export default {
       <p class="mb-3">Useful information about car.</p>
     </div>
 
-    <div class="container d-flex justify-content-between mb-4">
+    <div class="container d-flex flex-wrap justify-content-center mb-4 gap-3">
       <div v-for="article in articles" class="card text-bg-light mb-3" style="max-width: 18rem;">
         <div class="card-body d-flex flex-column justify-content-between">
           <img :src="article.image" alt="">
